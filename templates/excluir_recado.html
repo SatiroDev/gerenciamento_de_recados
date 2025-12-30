@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Excluir Recado</title>
+</head>
+<body>
+    <header>
+        <h2>Recados</h2>
+        <a href="/" class="btVerTodos">Voltar ao mural</a>
+    </header>
+    <main class="mainNovoRecado">
+        <div class="cardExcluir">
+            <img src="{{ url_for('static', filename='img/alert-triangle-svgrepo-com.svg') }}" alt="" class="iconAlerta">
+            <p class="tituloExcluir">
+                Excluir Recado
+            </p>
+            <p class="descExcluir">
+                Tem certeza que deseja excluir este recado? Esta ação não pode ser desfeita.
+            </p>
+            <div class="informacoesRecado">
+                <p class="infoNome">
+                    {{ recado.nome }}
+                </p>
+                <p class="infoMensagem">
+                    {{ recado.mensagem }}
+                </p>
+            </div>
+            <div class="botoesCardExcluir">
+                <a href="/" class="btCancelar">
+                    Cancelar
+                </a>
+                <a href="{{ url_for('excluir_recado', id=id) }}" class="btExcluir">
+                    <img src="" alt="" class="">
+                    Excluir
+                </a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

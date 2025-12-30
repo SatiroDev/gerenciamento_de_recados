@@ -1,0 +1,344 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #131019;
+}
+
+header {
+    border-bottom: 1px solid #30293d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 10% 20px 10%;
+    background-color: #131019;
+}
+
+
+.btCriarRecado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #9952e0;
+    width: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    transition: 0.2 ease;
+}
+
+.btCriarRecado:hover {
+    transition: 0.2 ease;
+    background-color: #8b4acc;
+}
+
+.msgNenhumRecado, p {
+    color: #858fa3;
+    font-size: 17px;
+}
+
+h2{
+    color: #9b52e1;
+}
+
+.recados {
+    font-size: 33px;
+    color: #9b52e1; 
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #131019;
+    padding: 25px 10% 0 10%;
+}
+
+h1 {
+    display: flex;
+    gap: 8px;
+    color: white;
+}
+
+.caixaRecados {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #30293d;
+    height: auto;
+    padding: 40px;
+    background-color: #18151e;
+    border-radius: 20px;
+    gap: 20px;
+}
+
+.balaoMsg {
+    width: 80px;
+}
+
+.tituloNenhumRecado {
+    color: white;
+    font-size: 25px;
+}
+
+.iconUser {
+    width: 20px;
+    background-color: #362549;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.recadosLista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.recado {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    border: 1px solid #30293d;
+    border-radius: 10px;
+    width: 375px;
+    max-height: 120px;
+    transition: 0.2s ease;
+}
+
+.recado:hover {
+    border: 1px solid #5b3682;
+    transition: 0.2s ease;
+    box-shadow: 0px 0px 5px 5px #261934;
+}
+
+
+
+.usuario {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardLeft {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cardRight {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.recado .iconLapis {
+    padding: 5px;
+    width: 17px;
+    border-radius: 10px;
+    opacity: 0;
+    transition: 0.2s ease;
+} 
+
+.recado:hover .iconLapis {
+    opacity: 1;
+}
+
+.iconLapis:hover {
+    background-color: #9952e0;
+    transition: 0.2s ease;
+}
+
+.recado .iconLixeira {
+    opacity: 0;
+    padding: 5px;
+    width: 17px;
+    border-radius: 10px;
+    transition: 0.2s ease;
+}
+
+.recado:hover .iconLixeira {
+    opacity: 1;
+}
+
+.iconLixeira:hover {
+    background-color: #ff1414;
+    transition: 0.2s ease;
+}
+
+.nome {
+    color: white;
+}
+
+.btVerTodos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    border: 1px solid #24212c;
+    border-radius: 10px;
+    transition: 0.2s ease;
+}
+
+.btVerTodos:hover {
+    background-color: #9952e0;
+    transition: 0.2s ease;
+}
+
+.mainNovoRecado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tituloForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+form {
+    display: flex;
+    padding: 25px;
+    flex-direction: column;
+    width: 30%;
+    min-width: 250px;
+    border: 1px solid #30293d;
+    border-radius: 10px;
+    color: white;
+    background-color: #1d1a23;
+    gap: 10px;
+}
+
+input {
+    background-color: #24212c;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+
+}   
+
+textarea {
+    background-color: #24212c;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}   
+
+.iconAviao {
+    width: 15px;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background-color: #9952e0;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    gap: 10px;
+    transition: 0.2 ease;
+}
+
+.enviar {
+    font-size: 15px;
+    color: white;
+}
+
+button:hover {
+    transition: 0.2 ease;
+    background-color: #8b4acc;
+}
+
+.cardExcluir {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid #5c262c;
+    padding: 25px;
+    gap: 10px;
+    border-radius: 10px;
+    background-color: #1d1a23;
+    min-width: 250px;
+    width: 40%;
+}
+
+.iconAlerta {
+    padding: 10px;
+    background-color: #321e26;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.tituloExcluir {
+    font-size: 25px;
+    color: white;
+}
+
+.descExcluir {
+    text-align: center;
+    font-size: 20px;
+    width: 90%;
+}
+
+.informacoesRecado {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    width: 90%;
+    background-color: #242129;
+    padding: 15px;
+    gap: 5px;
+}
+
+.infoNome {
+    color: white;
+    font-size: 20px;
+}
+
+.botoesCardExcluir {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btCancelar, .btExcluir {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7px;
+    text-decoration: none;
+    max-width: 220px;
+    width: 100%;
+    border-radius: 10px
+}
+
+.btCancelar {
+    background-color: #131018;
+    border: 1px solid #211e28;
+    color: white;
+}
+
+.btExcluir {
+    background-color: #ef4444;
+    color: white;
+}

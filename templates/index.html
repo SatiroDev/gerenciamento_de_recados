@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Recados</title>
+</head>
+<body>
+    <header>
+        <h2>Recados</h2>
+        <a href="{{ url_for('novo_recado') }}" class="btCriarRecado">Novo Recado</a>
+    </header>
+    <main>
+        <h1>Mural de <p class="recados">Recados</p></h1>
+        {% if lista_recados | length == 0 %}
+        <p>Nenhum recado no mural</p>
+        <div class="caixaRecados">
+            <img src="{{ url_for('static', filename='img/message-circle-medical-svgrepo-com.svg') }}"  alt="balao mensagem" class="balaoMsg">
+            <p class="tituloNenhumRecado">Nenhum recado ainda</p>
+            <p class="msgNenhumRecado">Seja o primeiro a deixar um recado!</p>
+            <a href="{{ url_for('novo_recado') }}" class="btCriarRecado">Criar Recado</a>
+        </div>
+        {% else %}
+        <p> {{ lista_recados | length }} recado(s) no mural</p>
+        <div class="recadosLista">
+            {% for recado in lista_recados %}
+            <div class="recado">
+                <div class="usuario">
+                    <div class="cardLeft">
+                        <img src="{{ url_for('static', filename='img/user-alt-1-svgrepo-com (4).svg') }}" alt="" class="iconUser">
+                        <p class="nome">{{ recado.nome }}</p>
+                    </div>
+                    <div class="cardRight">
+                        <a href="{{ url_for('editar_recado', id=loop.index0) }}" class="editar">
+                            <img src="{{ url_for('static', filename='img/pen-svgrepo-com.svg') }}" alt="" class="iconLapis">
+                        </a>
+                        <a href="{{ url_for('tela_excluir_recado', id=loop.index0) }}" class="apagar">
+                            <img src="{{ url_for('static', filename='img/trash-can-svgrepo-com.svg') }}" alt="" class="iconLixeira">
+                        </a>
+                    </div>
+
+                </div>
+                <p class="msg">{{ recado.mensagem }}</p>
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </main>
+</body>
+</html>
